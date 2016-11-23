@@ -1,0 +1,52 @@
+# info about the db
+
+#source1:
+#  type: 'OpenNI'
+#  module: 'object_recognition_core.io.source'
+#  parameters:
+#    image_mode: 'SXGA_RES'
+#    depth_mode: 'VGA_RES'
+#    image_fps: 'FPS_15'
+#    depth_fps: 'FPS_30'
+
+source1:
+  type: RosKinect
+  module: 'object_recognition_ros.io'
+  parameters:
+    rgb_frame_id: 'CameraTop_optical_frame'
+    rgb_camera_info: '/pepper_robot/camera/front/camera_info'
+    rgb_image_topic: '/pepper_robot/camera/front/image_rect_color'
+    
+    depth_frame_id: 'CameraTop_optical_frame'
+    depth_image_topic: '/pepper_robot/camera/depth_registered/sw_registered/image_rect'
+    depth_camera_info: '/pepper_robot/camera/depth_registered/sw_registered/camera_info'
+
+sink1:
+  type: Publisher
+  module: 'object_recognition_ros.io'
+  inputs: [source1]
+
+pipeline1:
+  type: LinemodDetector
+  module: 'object_recognition_linemod'
+  inputs: [source1]
+  outputs: [sink1]
+  parameters:
+    use_rgb: 1
+    use_depth: 1
+    verbose: 1
+    visualize: 1
+    threshold: 85 #77 #81.0 #78.0 #74.0 #79.0 #91.6 
+    th_obj_dist: 0.1
+    icp_dist_min: 0.38 #0.38 #0.18 #0.06 #1.0 #minimal icp distance; reject if the distance is bigger
+    px_match_min: 0.2 #035 0.75 #0.86 #0.66 #0.5 #0.0 minimal ratio of matching pixels
+    depth_frame_id: 'CameraTop_optical_frame' #camera_depth_optical_frame #needed for pc
+    depth_fill_holes: 0
+    # Params for training
+    # The list of object_ids to analyze
+    object_ids: 'all'
+    #object_ids: ['ed149575c2a44c1c095c5bc1b80c3038']
+    db:
+      type: 'CouchDB'
+      root: 'http://localhost:5984'
+      collection: 'object_recognition'

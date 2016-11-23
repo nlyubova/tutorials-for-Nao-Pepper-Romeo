@@ -1,0 +1,57 @@
+source1:
+  type: RosKinect
+  module: 'object_recognition_ros.io'
+  #
+  # Example parameters to set (the default settings are using the ros topics starting with /camera/....) 
+  #  
+  parameters:
+    #crop_enabled: True
+    #x_min: -0.4
+    #x_max: 0.4
+    #y_min: -1.0
+    #y_max: 0.2
+    #z_min: 0.3
+    #z_max: 1.5
+    # or again for the camera:
+    rgb_frame_id: 'CameraTop_optical_frame'
+    rgb_image_topic: '/pepper_robot/camera/front/image_rect_color'
+    rgb_camera_info: '/pepper_robot/camera/front/camera_info'
+    depth_image_topic: '/pepper_robot/camera/depth_registered/sw_registered/image_rect'
+    depth_camera_info: '/pepper_robot/camera/depth_registered/sw_registered/camera_info'
+
+sink1:
+  type: TablePublisher
+  module: 'object_recognition_tabletop'
+  inputs: [source1]
+
+sink2:
+  type: Publisher
+  module: 'object_recognition_ros.io'
+  inputs: [source1]
+
+
+pipeline1:
+  type: TabletopTableDetector
+  module: 'object_recognition_tabletop'
+  inputs: [source1]
+  outputs: [sink1]
+  parameters:
+    table_detector:
+        min_table_size: 4000
+        plane_threshold: 0.01
+    #clusterer:
+    #    table_z_filter_max: 0.35
+    #    table_z_filter_min: 0.025
+
+pipeline2:
+  type: TabletopObjectDetector
+  module: 'object_recognition_tabletop'
+  inputs: [source1, pipeline1]
+  outputs: [sink2]
+  parameters:
+    object_ids: 'all'
+    tabletop_object_ids: 'REDUCED_MODEL_SET'
+    db:
+      type: CouchDB
+      root: http://localhost:5984
+      collection: object_recognition
