@@ -1,0 +1,14 @@
+pipeline1:
+  type: LinemodTrainer
+  module: 'object_recognition_linemod'
+  parameters:
+    renderer_radius_min: 1.15 #1.55
+    renderer_radius_max: 1.5 #1.65
+    renderer_width: 320
+    renderer_height: 240
+    # The list of object_ids to analyze
+    object_ids: 'all'
+    db:
+      type: 'CouchDB'
+      root: 'http://localhost:5984'
+      collection: 'object_recognition'

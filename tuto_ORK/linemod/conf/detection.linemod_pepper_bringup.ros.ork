@@ -41,7 +41,6 @@ pipeline1:
     icp_dist_min: 0.38 #0.38 #0.18 #0.06 #1.0 #minimal icp distance; reject if the distance is bigger
     px_match_min: 0.2 #035 0.75 #0.86 #0.66 #0.5 #0.0 minimal ratio of matching pixels
     depth_frame_id: 'CameraTop_optical_frame' #camera_depth_optical_frame #needed for pc
-    depth_fill_holes: 0
     # Params for training
     # The list of object_ids to analyze
     object_ids: 'all'

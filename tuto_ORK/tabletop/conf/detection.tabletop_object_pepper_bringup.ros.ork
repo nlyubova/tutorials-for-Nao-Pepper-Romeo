@@ -37,7 +37,7 @@ pipeline1:
   outputs: [sink1]
   parameters:
     table_detector:
-        min_table_size: 4000
+        min_table_size: 50
         plane_threshold: 0.01
     #clusterer:
     #    table_z_filter_max: 0.35

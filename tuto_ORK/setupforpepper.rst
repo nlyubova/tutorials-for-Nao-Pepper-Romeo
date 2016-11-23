@@ -29,6 +29,14 @@ http://wg-perception.github.io/object_recognition_core/install.html#install
 Launch
 ------
 
+Prepare the setup 
+
+* download configuration files from this git and place them to linemod/conf and tabletop/conf
+
+* download a coke mesh and add it in the DB, check `here <http://wg-perception.github.io/ork_tutorials/tutorial01/tutorial.html>`_
+
+Prepare the robot
+
 * Start pepper_bringup
 
     .. code-block:: bash
@@ -36,21 +44,6 @@ Launch
         export NAO_IP=10.0.205.244
         
         roslaunch pepper_bringup pepper_full.launch
-
-* copy configuration files from the current git folder
-
-* start ORK
-  either Tabletop method
-
-    .. code-block:: bash
-    
-        rosrun object_recognition_core detection -c /home/nlyubova/catkin_ork/src/tabletop/conf/detection.object_pepper_bringup.ros.ork
-
-  or start Linemod method
-
-    .. code-block:: bash
-
-        rosrun object_recognition_core detection -c /home/nlyubova/catkin_ork/src/linemod/conf/detection.robot_pepper_naoqi.ros.ork
 
 * start RviZ
 
@@ -63,3 +56,36 @@ Launch
     * /naoqi_driver_node/camera/depth_registered/image_rect
     
     * /naoqi_driver_node/camera/front/image_rect_color
+
+
+To launch ORK Tabletop method
+
+* start ORK Tabletop
+
+    .. code-block:: bash
+    
+        rosrun object_recognition_core detection -c `rospack find object_recognition_tabletop`/conf/detection.tabletop_object_pepper_bringup.ros.ork
+
+To launch ORK Linemod method
+
+* train
+  
+    .. code-block:: bash
+
+        rosrun object_recognition_core training -c `rospack find object_recognition_linemod`/conf/training.linemod_pepper.ork
+        
+* start recognition, either in a continuous mode
+  
+    .. code-block:: bash
+    
+        rosrun object_recognition_core detection -c `rospack find object_recognition_linemod`/conf/detection.linemod_pepper_bringup.ros.ork
+
+* or start recognition in a client-server mode
+
+    .. code-block:: bash
+    
+        rosrun object_recognition_ros server -c `rospack find object_recognition_linemod`/conf/detection.linemod_pepper_bringup.ros.ork
+
+    .. code-block:: bash
+
+        rosrun object_recognition_ros client
