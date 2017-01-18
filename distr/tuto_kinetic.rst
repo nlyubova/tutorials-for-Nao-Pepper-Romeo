@@ -10,7 +10,7 @@ Pre-requirements
 
 * installed ROS (Indigo for Ubuntu 14 or Kinetic for Ubuntu 16), check http://wiki.ros.org/Installation
 
-    .. code-block:: bash
+  .. code-block:: bash
 
         sudo apt-get install ros-kinetic-desktop
         source /opt/ros/kinetic/setup.bash
@@ -28,13 +28,13 @@ Installation
 
     * install MoveIt!-specific packages, check https://github.com/ros-naoqi/nao_moveit_config
 
-    .. code-block:: bash
+      .. code-block:: bash
 
           sudo apt-get install ros-kinetic-moveit ros-kinetic-moveit-visual-tools
 
         * compile the following packages from source
 
-        .. code-block:: bash
+          .. code-block:: bash
 
               mkdir -p ~/catkin_ws/src
               cd ~/catkin_ws/src
@@ -60,22 +60,22 @@ Testing
 
 *  source your ROS installation; 
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    source /opt/ros/kinetic/setup.bash
-    source ~/catkin_ws/devel/setup.bash
+      source /opt/ros/kinetic/setup.bash
+      source ~/catkin_ws/devel/setup.bash
 
 *   launch MoveIt! and check if you see a robot, check the `tutorial <https://github.com/ros-naoqi/nao_moveit_config>`_
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    roslaunch nao_moveit_config demo.launch
+      roslaunch nao_moveit_config demo.launch
 
 *   optionally, if you have installed Gazebo, then check it and see the `tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    roslaunch nao_gazebo_plugin nao_gazebo_plugin_H25.launch
+      roslaunch nao_gazebo_plugin nao_gazebo_plugin_H25.launch
 
 
 
