@@ -29,7 +29,7 @@ Pre-requirements
 Installation
 ------------
 
-* if you use Nao (check http://wiki.ros.org/nao) and install the following packages replacing <ROBOT> by nao 
+* if you use Nao robot, check http://wiki.ros.org/nao and install the following packages replacing <ROBOT> by nao 
 
     .. code-block:: bash
 
