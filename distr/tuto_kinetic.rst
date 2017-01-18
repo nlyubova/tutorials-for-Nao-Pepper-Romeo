@@ -65,13 +65,19 @@ Testing
         source /opt/ros/kinetic/setup.bash
         source ~/catkin_ws/devel/setup.bash
 
-* launch MoveIt! and check if you see a robot, check the `tutorial <https://github.com/ros-naoqi/nao_moveit_config>`_
+* if you have Nao, check Naoqi Driver providing the robot's IP
+
+  .. code-block:: bash
+
+        roslaunch naoqi_driver naoqi_driver.launch nao_ip:=<ROBOT_IP>
+
+* test MoveIt! and check if you see a robot, check the `tutorial <https://github.com/ros-naoqi/nao_moveit_config>`_
 
   .. code-block:: bash
 
         roslaunch nao_moveit_config demo.launch
 
-* optionally, if you have installed Gazebo, then check it and see the `tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
+* optionally, if you have installed Gazebo, then test it and see the `tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
 
   .. code-block:: bash
 
