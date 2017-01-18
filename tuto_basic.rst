@@ -85,7 +85,7 @@ Testing
 
         source ~/catkin_ws/devel/setup.bash
 
-*   launch MoveIt! and check if you see a robot, check the tutorial https://github.com/ros-naoqi/nao_moveit_config
+*   launch MoveIt! and check if you see a robot, check the `tutorial <https://github.com/ros-naoqi/nao_moveit_config>`_
 
 .. code-block:: bash
 
