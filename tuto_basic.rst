@@ -1,63 +1,80 @@
 ROS tutorials for Nao, Pepper, Romeo robots
 ===========================================
 
-Here we describe the main steps to setup your system and use ROS with Nao, Pepper, Romeo. We provide examples of installing all packages with "apt-get", however each package can be also installed from source (check the corresponding Github links).  
+Here, we describe the main steps to setup your system and use ROS with Nao, Pepper, or Romeo. We provide examples of installing all packages with "apt-get" if possible, however each package can be also installed from source (check the corresponding Github links).  
 
-* install Ubuntu (14.04 is fine, others are possible), check http://howtoubuntu.org/how-to-install-ubuntu-14-04-trusty-tahr
+* install Ubuntu (14.04 is the supported one and earlier versions are possible), check http://howtoubuntu.org/how-to-install-ubuntu-14-04-trusty-tahr
 
-* install ROS (Indigo is recommended), check http://wiki.ros.org/Installation
+* install ROS (Indigo for Ubuntu 14 or Kinetic for Ubuntu 16), check http://wiki.ros.org/Installation
 
     .. code-block:: bash
 
-        sudo apt-get install ros-indigo-desktop
-        source /opt/ros/indigo/setup.bash
+        sudo apt-get install ros-<ROS_version>-desktop
+   
+* install MoveIt!, check http://moveit.ros.org/
+
+    .. code-block:: bash
     
-* if you use Nao (recommended), check http://wiki.ros.org/nao
+        sudo apt-get install ros-<ROS_version>-moveit
+
+* source your installation
+
+        source /opt/ros/<ROS_version>/setup.bash
+
+* if you use Nao (check http://wiki.ros.org/nao) and install the following packages replacing <ROBOT> by nao 
 
     .. code-block:: bash
 
-          sudo apt-get install ros-indigo-nao-robot ros-indigo-nao-meshes
+          sudo apt-get install ros-<ROS_version>-<ROBOT>-robot ros-<ROS_version>-<ROBOT>-meshes
 
-    * install MoveIt!, check https://github.com/ros-naoqi/nao_moveit_config
+    * install MoveIt! specific packages, check https://github.com/ros-naoqi/nao_moveit_config
 
     .. code-block:: bash
 
-          sudo apt-get install ros-indigo-moveit-full ros-indigo-moveit-visual-tools ros-indigo-nao-moveit-config
+          sudo apt-get install ros-<ROS_version>-moveit-visual-tools ros-<ROS_version>-<ROBOT>-moveit-config
 
     *  optionally, install Gazebo, check https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin
 
     .. code-block:: bash
 
-          sudo apt-get install ros-indigo-nao-control ros-indigo-nao-gazebo-plugin
+          sudo apt-get install ros-<ROS_version>-<ROBOT>-control ros-<ROS_version>-<ROBOT>-gazebo-plugin
 
 
-* if you use any other robot, additionally install all packages for <pepper> or <romeo> instead of <nao>
+* if you use any other robot, additionally install all packages for <pepper> or <romeo> instead as <ROBOT>
 
 * if you use Pepper, check http://wiki.ros.org/pepper
 
     .. code-block:: bash
 
-          sudo apt-get install ros-indigo-pepper-robot ros-indigo-pepper-meshes
-          sudo apt-get install ros-indigo-pepper-moveit-config
-          sudo apt-get install ros-indigo-pepper-control ros-indigo-pepper-gazebo-plugin
+          sudo apt-get install ros-<ROS_version>-pepper-robot ros-<ROS_version>-pepper-meshes
+          sudo apt-get install ros-<ROS_version>-pepper-moveit-config
+          sudo apt-get install ros-<ROS_version>-pepper-control ros-<ROS_version>-pepper-gazebo-plugin
       
 * if you use Romeo, check http://wiki.ros.org/romeo
 
     .. code-block:: bash
 
-          sudo apt-get install ros-indigo-romeo-robot
-          sudo apt-get install ros-indigo-romeo-moveit-config
+          sudo apt-get install ros-<ROS_version>-romeo-robot
+          sudo apt-get install ros-<ROS_version>-romeo-moveit-config
+          sudo apt-get install ros-<ROS_version>-romeo-control ros-<ROS_version>-romeo-gazebo-plugin
 
 
 Test your setup:
 
-*  source your ROS installation; in case of installing everything with "apt-get", do
+*  source your ROS installation; 
+  * in case of installing everything with "apt-get", do
 
-.. code-block:: bash
+    .. code-block:: bash
 
-    source /opt/ros/indigo/setup.bash
+        source /opt/ros/<ROS_version>/setup.bash
 
-*   Launch MoveIt!, check the tutorial https://github.com/ros-naoqi/nao_moveit_config
+  * in case of installing from source, source your catkin workspace, for example
+
+    .. code-block:: bash
+
+        source catkin_ws/devel/setup.bash
+
+*   Launch MoveIt! and check if you see a robot, check the tutorial https://github.com/ros-naoqi/nao_moveit_config
 
 .. code-block:: bash
 
@@ -71,4 +88,4 @@ Test your setup:
 
 
 
-Please, let me know if you find any typos :) or any question, and I will try to help you.
+Please, open PR if you find any typos :) or question, and I will try to help you.
