@@ -58,20 +58,20 @@ Installation
 Testing
 -------
 
-*  source your ROS installation; 
+* source your ROS installation; 
 
   .. code-block:: bash
 
         source /opt/ros/kinetic/setup.bash
         source ~/catkin_ws/devel/setup.bash
 
-*   launch MoveIt! and check if you see a robot, check the `tutorial <https://github.com/ros-naoqi/nao_moveit_config>`_
+* launch MoveIt! and check if you see a robot, check the `tutorial <https://github.com/ros-naoqi/nao_moveit_config>`_
 
   .. code-block:: bash
 
         roslaunch nao_moveit_config demo.launch
 
-*   optionally, if you have installed Gazebo, then check it and see the `tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
+* optionally, if you have installed Gazebo, then check it and see the `tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
 
   .. code-block:: bash
 
