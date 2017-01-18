@@ -3,6 +3,9 @@ ROS tutorials for Nao, Pepper, Romeo robots
 
 Here, we describe the main steps to setup your system and use ROS with Nao, Pepper, or Romeo. We provide examples of installing all packages with "apt-get" if possible, however each package can be also installed from source (check the corresponding Github links).  
 
+Pre-requirements
+----------------
+
 * install Ubuntu (14.04 is the supported one and earlier versions are possible), check http://howtoubuntu.org/how-to-install-ubuntu-14-04-trusty-tahr
 
 * install ROS (Indigo for Ubuntu 14 or Kinetic for Ubuntu 16), check http://wiki.ros.org/Installation
@@ -22,6 +25,9 @@ Here, we describe the main steps to setup your system and use ROS with Nao, Pepp
     .. code-block:: bash
 
         source /opt/ros/<ROS_version>/setup.bash
+
+Installation
+------------
 
 * if you use Nao (check http://wiki.ros.org/nao) and install the following packages replacing <ROBOT> by nao 
 
@@ -61,7 +67,8 @@ Here, we describe the main steps to setup your system and use ROS with Nao, Pepp
           sudo apt-get install ros-<ROS_version>-romeo-control ros-<ROS_version>-romeo-gazebo-plugin
 
 
-Test your setup:
+Testing
+-------
 
 *  source your ROS installation; 
     * in case of installing everything with "apt-get", do
