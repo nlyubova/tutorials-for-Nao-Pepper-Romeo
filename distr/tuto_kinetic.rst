@@ -24,25 +24,25 @@ Installation
  
       .. code-block:: bash
 
-          sudo apt-get install ros-kinetic-nao-robot ros-kinetic-nao-meshes
+            sudo apt-get install ros-kinetic-nao-robot ros-kinetic-nao-meshes
 
     * install MoveIt!-specific packages, check https://github.com/ros-naoqi/nao_moveit_config
 
       .. code-block:: bash
 
-          sudo apt-get install ros-kinetic-moveit ros-kinetic-moveit-visual-tools
+            sudo apt-get install ros-kinetic-moveit ros-kinetic-moveit-visual-tools
 
         * compile the following packages from source
 
           .. code-block:: bash
 
-              mkdir -p ~/catkin_ws/src
-              cd ~/catkin_ws/src
-              git clone https://github.com/ros-naoqi/nao_moveit_config
-              git clone https://github.com/ros-naoqi/nao_virtual
-              git clone https://github.com/ros-naoqi/nao_dcm_robot
-              cd ..
-              catkin_make
+                mkdir -p ~/catkin_ws/src
+                cd ~/catkin_ws/src
+                git clone https://github.com/ros-naoqi/nao_moveit_config
+                git clone https://github.com/ros-naoqi/nao_virtual
+                git clone https://github.com/ros-naoqi/nao_dcm_robot
+                cd ..
+                catkin_make
 
     *  optionally, install Gazebo, check `the official tutorial <http://gazebosim.org/tutorials?tut=install_ubuntu>`_ and then `our tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
 
@@ -62,20 +62,20 @@ Testing
 
   .. code-block:: bash
 
-      source /opt/ros/kinetic/setup.bash
-      source ~/catkin_ws/devel/setup.bash
+        source /opt/ros/kinetic/setup.bash
+        source ~/catkin_ws/devel/setup.bash
 
 *   launch MoveIt! and check if you see a robot, check the `tutorial <https://github.com/ros-naoqi/nao_moveit_config>`_
 
   .. code-block:: bash
 
-      roslaunch nao_moveit_config demo.launch
+        roslaunch nao_moveit_config demo.launch
 
 *   optionally, if you have installed Gazebo, then check it and see the `tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
 
   .. code-block:: bash
 
-      roslaunch nao_gazebo_plugin nao_gazebo_plugin_H25.launch
+        roslaunch nao_gazebo_plugin nao_gazebo_plugin_H25.launch
 
 
 
