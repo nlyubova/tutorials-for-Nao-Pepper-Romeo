@@ -19,6 +19,8 @@ Here, we describe the main steps to setup your system and use ROS with Nao, Pepp
 
 * source your installation
 
+    .. code-block:: bash
+
         source /opt/ros/<ROS_version>/setup.bash
 
 * if you use Nao (check http://wiki.ros.org/nao) and install the following packages replacing <ROBOT> by nao 
