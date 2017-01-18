@@ -22,7 +22,7 @@ Installation
 
     * install basic packages
  
-    .. code-block:: bash
+      .. code-block:: bash
 
           sudo apt-get install ros-kinetic-nao-robot ros-kinetic-nao-meshes
 
