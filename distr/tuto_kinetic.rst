@@ -18,7 +18,7 @@ Pre-requirements
 Installation
 ------------
 
-* if you use Nao robot, check http://wiki.ros.org/nao 
+* if you use Nao robot, check available packages and tutorials on http://wiki.ros.org/nao 
 
   * install basic packages
  
