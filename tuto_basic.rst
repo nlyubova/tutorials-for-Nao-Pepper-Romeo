@@ -62,13 +62,13 @@ Here, we describe the main steps to setup your system and use ROS with Nao, Pepp
 Test your setup:
 
 *  source your ROS installation; 
-  * in case of installing everything with "apt-get", do
+    * in case of installing everything with "apt-get", do
 
     .. code-block:: bash
 
         source /opt/ros/<ROS_version>/setup.bash
 
-  * in case of installing from source, source your catkin workspace, for example
+    * in case of installing from source, source your catkin workspace, for example
 
     .. code-block:: bash
 
