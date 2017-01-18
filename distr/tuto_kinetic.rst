@@ -20,38 +20,38 @@ Installation
 
 * if you use Nao robot, check http://wiki.ros.org/nao 
 
-    * install basic packages
+  * install basic packages
  
+    .. code-block:: bash
+
+          sudo apt-get install ros-kinetic-nao-robot ros-kinetic-nao-meshes
+
+  * install MoveIt!-specific packages, check https://github.com/ros-naoqi/nao_moveit_config
+
+    .. code-block:: bash
+
+          sudo apt-get install ros-kinetic-moveit ros-kinetic-moveit-visual-tools
+
+    * compile the following packages from source
+
       .. code-block:: bash
 
-            sudo apt-get install ros-kinetic-nao-robot ros-kinetic-nao-meshes
-
-    * install MoveIt!-specific packages, check https://github.com/ros-naoqi/nao_moveit_config
-
-      .. code-block:: bash
-
-            sudo apt-get install ros-kinetic-moveit ros-kinetic-moveit-visual-tools
-
-        * compile the following packages from source
-
-          .. code-block:: bash
-
-                mkdir -p ~/catkin_ws/src
-                cd ~/catkin_ws/src
-                git clone https://github.com/ros-naoqi/nao_moveit_config
-                git clone https://github.com/ros-naoqi/nao_virtual
-                git clone https://github.com/ros-naoqi/nao_dcm_robot
-                cd ..
-                catkin_make
+            mkdir -p ~/catkin_ws/src
+            cd ~/catkin_ws/src
+            git clone https://github.com/ros-naoqi/nao_moveit_config
+            git clone https://github.com/ros-naoqi/nao_virtual
+            git clone https://github.com/ros-naoqi/nao_dcm_robot
+            cd ..
+            catkin_make
 
     *  optionally, install Gazebo, check `the official tutorial <http://gazebosim.org/tutorials?tut=install_ubuntu>`_ and then `our tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
 
 
 * if you use any other robot, install all packages for -pepper- or -romeo- instead as -nao-
 
-    * for Pepper, check http://wiki.ros.org/pepper
+  * for Pepper, check http://wiki.ros.org/pepper
      
-    * for Romeo, check http://wiki.ros.org/romeo
+  * for Romeo, check http://wiki.ros.org/romeo
 
 
 
