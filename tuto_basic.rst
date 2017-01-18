@@ -52,7 +52,7 @@ Installation
 
 * if you use any other robot, additionally install all packages for <pepper> or <romeo> instead as <ROBOT>
 
-* if you use Pepper, check http://wiki.ros.org/pepper
+    * if you use Pepper, check http://wiki.ros.org/pepper
 
     .. code-block:: bash
 
@@ -60,7 +60,7 @@ Installation
           sudo apt-get install ros-<ROS_version>-pepper-moveit-config
           sudo apt-get install ros-<ROS_version>-pepper-control ros-<ROS_version>-pepper-gazebo-plugin
       
-* if you use Romeo, check http://wiki.ros.org/romeo
+    * if you use Romeo, check http://wiki.ros.org/romeo
 
     .. code-block:: bash
 
