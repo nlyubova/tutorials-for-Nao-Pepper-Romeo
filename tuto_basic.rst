@@ -43,7 +43,7 @@ Installation
 
           sudo apt-get install ros-<ROS_version>-moveit-visual-tools ros-<ROS_version>-<ROBOT>-moveit-config
 
-    *  optionally, install Gazebo, check https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin
+    *  optionally, install Gazebo, check `here <http://gazebosim.org/tutorials?tut=install_ubuntu>`_ and `here <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
 
     .. code-block:: bash
 
