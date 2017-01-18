@@ -83,15 +83,15 @@ Testing
 
     .. code-block:: bash
 
-        source catkin_ws/devel/setup.bash
+        source ~/catkin_ws/devel/setup.bash
 
-*   Launch MoveIt! and check if you see a robot, check the tutorial https://github.com/ros-naoqi/nao_moveit_config
+*   launch MoveIt! and check if you see a robot, check the tutorial https://github.com/ros-naoqi/nao_moveit_config
 
 .. code-block:: bash
 
     roslaunch nao_moveit_config demo.launch
 
-*   Launch Gazebo, check the tutorial https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin
+*   optionally, if you have installed Gazebo, check the `tutorial <https://github.com/ros-naoqi/nao_virtual/tree/master/nao_gazebo_plugin>`_
 
 .. code-block:: bash
 
