@@ -31,11 +31,13 @@ Installation
 
 * if you use Nao robot, check http://wiki.ros.org/nao and install the following packages replacing <ROBOT> by nao 
 
+    * install basic packages
+
     .. code-block:: bash
 
           sudo apt-get install ros-<ROS_version>-<ROBOT>-robot ros-<ROS_version>-<ROBOT>-meshes
 
-    * install MoveIt! specific packages, check https://github.com/ros-naoqi/nao_moveit_config
+    * install MoveIt!-specific packages, check https://github.com/ros-naoqi/nao_moveit_config
 
     .. code-block:: bash
 
